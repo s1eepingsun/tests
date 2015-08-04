@@ -33,7 +33,7 @@
                             <div id="back_iq" class="top_p_b_nav_iq_notactive" style="margin-left: 0px;font-size: 8pt; ">
                                 <div class="t_co_nav">
                                     <div class="co_nav">
-                                         Предыдущий вопрос
+                                        Предыдущий вопрос
                                     </div>
                                 </div>
                             </div>
@@ -66,6 +66,7 @@
                 </div>									
 
                 <div id="sum-main">
+                    <!--контент загружается аяксом + mustache-->
                 </div>
             </div>
 
