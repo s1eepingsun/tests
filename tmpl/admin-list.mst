@@ -1,0 +1,136 @@
+<div class="result">
+    <h3>Админка</h3>
+
+    <h3>Задачи:</h3>
+    
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>Задача</th>
+            <th>Ответ 1</th>
+            <th>Ответ 2</th>
+            <th>Ответ 3</th>
+            <th>Ответ 4</th>
+            <th>равильный ответ</th>
+            <th>Действие</th>
+        </tr>
+        {{#sums}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{sum}}</td>
+            <td>{{answer1}}</td>
+            <td>{{answer2}}</td>
+            <td>{{answer3}}</td>
+            <td>{{answer4}}</td>
+            <td>{{answer}}</td>
+            <td><span class="delete-sum" id="sum{{id}}"> Удалить </span></td>
+        </tr>
+        {{/sums}}
+        
+    </table>
+    
+    
+    <h3>Новая задача для теста:</h3>
+
+    <form id="new-sum"  action="javascript:void(null);" onsubmit="createSum()" method="post">
+        <div class="form-left">
+            <div><label>Задача</label></div>
+            <div><label>Вариант ответа 1</label></div>
+            <div><label>Вариант ответа 2</label></div>
+            <div><label>Вариант ответа 3</label></div>
+            <div><label>Вариант ответа 4</label></div>
+            <div><label>Правильный вариант</label></div>
+        </div>
+        <div class="form-right">
+            <div><input type="text" class="form-input" name="sum" maxlength="255"></div>
+            <div><input type="text" class="form-input" name="answer1" maxlength="255"></div>
+            <div><input type="text" class="form-input" name="answer2" maxlength="255"></div>
+            <div><input type="text" class="form-input" name="answer3" maxlength="255"></div>
+            <div><input type="text" class="form-input" name="answer4" maxlength="255"></div>
+            <div>
+                <label><input type="radio" name="answer" value="1">1</label>
+                <label><input type="radio" name="answer" value="2">2</label>
+                <label><input type="radio" name="answer" value="3">3</label>
+                <label><input type="radio" name="answer" value="4">4</label>
+            </div>
+        </div>
+        <div class="submit">
+            <input value="Создать" type="submit">
+        </div>
+    </form>
+    
+    <form id="new-sum"  action="javascript:void(null);" onsubmit="createSum()" method="post">
+        
+            <div>
+                <div class="label"><label>Задача</label></div>
+                <div><input type="text" class="form-input" name="sum" maxlength="255"></div>
+            </div>
+            <div>
+                <div><label>Вариант ответа 1</label></div>
+                <div><input type="text" class="form-input" name="answer1" maxlength="255"></div>
+            </div>
+            <div>
+                <div><label>Вариант ответа 2</label></div>
+                <div><input type="text" class="form-input" name="answer2" maxlength="255"></div></div>
+            <div>
+                <div><label>Вариант ответа 3</label></div>
+                <div><input type="text" class="form-input" name="answer3" maxlength="255"></div>
+            </div>
+            <div>
+                <div><label>Вариант ответа 4</label></div>
+                <div><input type="text" class="form-input" name="answer4" maxlength="255"></div>
+            </div>
+            <div>   
+                <div><label>Правильный вариант</label></div>
+                <div>
+                    <label><input type="radio" name="answer" value="1">1</label>
+                    <label><input type="radio" name="answer" value="2">2</label>
+                    <label><input type="radio" name="answer" value="3">3</label>
+                    <label><input type="radio" name="answer" value="4">4</label>
+                </div>
+            </div>
+       
+        <div class="submit">
+            <input value="Создать" type="submit">
+        </div>
+    </form>
+    
+    <form action="" method="post" class="basic-grey">
+        <h1>Новая задача для теста</h1>
+        <label>
+            <span>Задача</span>
+            <input id="name" type="text" name="sum"/>
+        </label>
+        <label>
+            <span>Вариант ответа 1</span>
+            <input type="text" name="answer1"/>
+        </label>
+        <label>
+            <span>Вариант ответа 2</span>
+            <input type="text" name="answer2"/>
+        </label>
+        <label>
+            <span>Вариант ответа 3</span>
+            <input type="text" name="answer3"/>
+        </label>
+        <label>
+            <span>Вариант ответа 4</span>
+            <input type="text" name="answer4"/>
+        </label>
+        
+        
+            <span>Правильный вариант</span>
+            <input type="radio" name="answer" id="radio1" value="1">1
+            <input type="radio" name="answer" id="radio1" value="2">1
+            <input type="radio" name="answer" id="radio1" value="3">1
+            <input type="radio" name="answer" id="radio1" value="4">1
+
+         <label>
+            <span>&nbsp;</span> 
+            <input type="button" class="button" value="Send" /> 
+        </label>    
+    </form>
+    
+    
+    <div class="response"></div>
+</div>

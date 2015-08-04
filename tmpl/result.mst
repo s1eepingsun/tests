@@ -1,0 +1,3 @@
+<div class="result">
+    Ваш результат: {{correctAnswers}} из {{allAnswers}}.
+</div>
